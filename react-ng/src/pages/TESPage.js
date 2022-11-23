@@ -3,9 +3,7 @@
  */
 import React from 'react';
 import {
-  createTheme,
   Box,
-  ThemeProvider,
   Container,
   Grid, Typography, Paper, Grow
 } from "@mui/material";

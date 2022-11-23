@@ -142,6 +142,34 @@ MUTABOR_FRIENDS_DATE.add(DAYS_MF, "days");
 const HOURS_MF = CURRENT_DATE.diff(MUTABOR_FRIENDS_DATE, "hours");
 MUTABOR_FRIENDS_DATE.add(HOURS_MF, "hours");
 
+/**
+ * Возраст Бусинки
+ */
+const BUSINKA_AGE = [2021, 2, 16, 0, 0];
+const BUSINKA_AGE_DATE = MOMENT(BUSINKA_AGE);
+const YEARS_BA = CURRENT_DATE.diff(BUSINKA_AGE_DATE, "years");
+BUSINKA_AGE_DATE.add(YEARS_BA, "years");
+const MONTHS_BA = CURRENT_DATE.diff(BUSINKA_AGE_DATE, "months");
+BUSINKA_AGE_DATE.add(MONTHS_BA, "months");
+const DAYS_BA = CURRENT_DATE.diff(BUSINKA_AGE_DATE, "days");
+BUSINKA_AGE_DATE.add(DAYS_BA, "days");
+const HOURS_BA = CURRENT_DATE.diff(BUSINKA_AGE_DATE, "hours");
+BUSINKA_AGE_DATE.add(HOURS_BA, "hours");
+
+/**
+ * Побрился налысо
+ */
+const BALDED = [2022, 10, 22, 17, 0];
+const BALDED_DATE = MOMENT(BALDED);
+const YEARS_BD = CURRENT_DATE.diff(BALDED_DATE, "years");
+BALDED_DATE.add(YEARS_BD, "years");
+const MONTHS_BD = CURRENT_DATE.diff(BALDED_DATE, "months");
+BALDED_DATE.add(MONTHS_BD, "months");
+const DAYS_BD = CURRENT_DATE.diff(BALDED_DATE, "days");
+BALDED_DATE.add(DAYS_BD, "days");
+const HOURS_BD = CURRENT_DATE.diff(BALDED_DATE, "hours");
+BALDED_DATE.add(HOURS_BD, "hours");
+
 const TIMERS = [
   {
     id: 0,
@@ -214,6 +242,24 @@ const TIMERS = [
     days: DAYS_MF,
     hours: HOURS_MF,
     date: MUTABOR_FRIENDS
+  },
+  {
+    id: 8,
+    title: 'Возраст Бусинки',
+    years: YEARS_BA,
+    months: MONTHS_BA,
+    days: DAYS_BA,
+    hours: HOURS_BA,
+    date: BUSINKA_AGE
+  },
+  {
+    id: 9,
+    title: 'Побрился налысо',
+    years: YEARS_BD,
+    months: MONTHS_BD,
+    days: DAYS_BD,
+    hours: HOURS_BD,
+    date: BALDED
   },
 ];
 

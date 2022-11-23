@@ -4,7 +4,7 @@
 /**
  * React
  */
-import React, {useState} from 'react';
+import React from 'react';
 import {Link as RouterLink} from "react-router-dom";
 
 /**
@@ -17,14 +17,13 @@ import {
   Container,
   Grid,
   Typography,
-  Link, Paper, Grow, AlertTitle, Alert, IconButton
+  Link, Paper, Grow
 } from "@mui/material";
 
 /**
  * Иконки
  */
 import resume from '../img/resume_icon.svg';
-import resume_pdf from "../img/pdf.svg";
 import calc from '../img/calc_icon.svg';
 import go_icon from "../img/angel.svg";
 import paw from "../img/paw.svg";
@@ -34,15 +33,7 @@ import stopwatch from "../img/stopwatch.svg";
 import vkurse from "../img/vkurse.svg";
 import popcorn from "../img/popcorn.svg";
 import solar_system from "../img/solar_system.svg";
-import fs from "../img/fs.svg";
 import calendar from "../img/calendar.svg";
-
-/**
- * Файлы
- */
-import resume_file from "../files/resume.pdf";
-import CloseIcon from "@mui/icons-material/Close";
-import Collapse from "@mui/material/Collapse/Collapse";
 
 const darkTheme = createTheme({
   palette: {
@@ -54,8 +45,6 @@ const darkTheme = createTheme({
 });
 
 export const IndexPage = () => {
-  const [openWarning, setOpenWarning] = useState(true);
-
   return (
     <Grow
       in
