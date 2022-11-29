@@ -104,94 +104,8 @@ export const CalcPage = () => {
     >
       <Box sx={{flexGrow: 1, pb: 2}}>
         <Paper
-          sx={{pb: 2}}
+          sx={{py: 2}}
         >
-          <Grid
-            container
-            justifyContent="center"
-            alignItems="center"
-          >
-            <Grid item xs={12} md={12} sx={{p: 2, pb: 0}}>
-              <Collapse in={openExample}>
-                <Alert
-                  severity="info"
-                  action={
-                    <IconButton
-                      aria-label="close"
-                      color="inherit"
-                      size="small"
-                      onClick={() => {
-                        setOpenExample(false);
-                      }}
-                    >
-                      <CloseIcon fontSize="inherit"/>
-                    </IconButton>
-                  }
-                  sx={{mb: 2}}
-                >
-                  <AlertTitle>Для чего нужен этот калькулятор?</AlertTitle>
-                  <Typography>
-                    Допустим мы хотим купить 🥑 авокадо и видим, что есть весовой за <strong>369.99₽/кг</strong> и в
-                    упаковке <strong>269.99₽/700 г</strong>, но какой выгоднее купить?
-                  </Typography>
-                  <Typography>
-                    Тогда <strong>A</strong> = 369.99, <strong>B</strong> = 1000 (грамм в кг), <strong>C</strong> = 700
-                  </Typography>
-                  <Typography>
-                    После решеня уравнения <strong>X = 258.993</strong>, то есть 700 г весового авокадо будет стоить
-                    258.993₽, что дешевле авокадо в упаковке за 269.99₽
-                  </Typography>
-                  <Typography>
-                    А значит выгоднее брать весовой авокадо
-                  </Typography>
-                </Alert>
-              </Collapse>
-            </Grid>
-          </Grid>
-          <Grid
-            container
-            justifyContent="center"
-            alignItems="center"
-            sx={{p: 2, pt: 0}}
-          >
-            <Grid item xs={12} md={12}>
-              <Collapse in={openFormula}>
-                <Alert
-                  severity="info"
-                  action={
-                    <IconButton
-                      aria-label="close"
-                      color="inherit"
-                      size="small"
-                      onClick={() => {
-                        setOpenFormula(false);
-                      }}
-                    >
-                      <CloseIcon fontSize="inherit"/>
-                    </IconButton>
-                  }
-                >
-                  <AlertTitle>Формулы</AlertTitle>
-                  <Typography>X = A × C ÷ B</Typography>
-                  <Typography>Z = X - Y</Typography>
-                </Alert>
-              </Collapse>
-            </Grid>
-          </Grid>
-          <Grid
-            container
-            justifyContent="center"
-            alignItems="center"
-            sx={{p: 2, pt: 0}}
-          >
-            <Grid item xs={12} md={12}>
-              <Alert
-                severity="warning"
-              >
-                Калькулятор находится в разработке, возможны ошибки
-              </Alert>
-            </Grid>
-          </Grid>
           <Grid
             container
             justifyContent="center"
@@ -267,7 +181,7 @@ export const CalcPage = () => {
                 variant="filled"
                 value={y}
                 onChange={(evt) => {
-                  setY(checkComma(evt.target.value));
+                  setY(parseNumber(evt.target.value));
                 }}
               />
             </Grid>
@@ -375,6 +289,94 @@ export const CalcPage = () => {
               >
                 Очистить
               </Button>
+            </Grid>
+          </Grid>
+          <Grid
+            container
+            justifyContent="center"
+            alignItems="center"
+          >
+            <Grid item xs={12} md={12} sx={{p: 2}}>
+              <Alert
+                severity="warning"
+              >
+                Калькулятор находится в разработке, возможны ошибки
+              </Alert>
+            </Grid>
+          </Grid>
+          <Grid
+            container
+            justifyContent="center"
+            alignItems="center"
+            sx={{p: 2, pt: 0}}
+          >
+            <Grid item xs={12} md={12}>
+              <Collapse in={openFormula}>
+                <Alert
+                  severity="info"
+                  action={
+                    <IconButton
+                      aria-label="close"
+                      color="inherit"
+                      size="small"
+                      onClick={() => {
+                        setOpenFormula(false);
+                      }}
+                    >
+                      <CloseIcon fontSize="inherit"/>
+                    </IconButton>
+                  }
+                >
+                  <AlertTitle>Формулы</AlertTitle>
+                  <Typography>X = A × C ÷ B</Typography>
+                  <Typography>Z = X - Y</Typography>
+                </Alert>
+              </Collapse>
+            </Grid>
+          </Grid>
+          <Grid
+            container
+            justifyContent="center"
+            alignItems="center"
+          >
+            <Grid item xs={12} md={12} sx={{px: 2}}>
+              <Collapse in={openExample}>
+                <Alert
+                  severity="info"
+                  action={
+                    <IconButton
+                      aria-label="close"
+                      color="inherit"
+                      size="small"
+                      onClick={() => {
+                        setOpenExample(false);
+                      }}
+                    >
+                      <CloseIcon fontSize="inherit"/>
+                    </IconButton>
+                  }
+                >
+                  <AlertTitle>Для чего нужен этот калькулятор?</AlertTitle>
+                  <Typography>
+                    Допустим мы хотим купить 🥑 авокадо и видим, что есть
+                    весовой за <strong>369.99₽/кг</strong> и в
+                    упаковке <strong>269.99₽/700 г</strong>, но какой выгоднее
+                    купить?
+                  </Typography>
+                  <Typography>
+                    Тогда <strong>A</strong> = 369.99, <strong>B</strong> = 1000
+                    (грамм в кг), <strong>C</strong> = 700
+                  </Typography>
+                  <Typography>
+                    После решеня уравнения <strong>X = 258.993</strong>, то есть
+                    700 г весового авокадо будет стоить
+                    258.993₽, что дешевле авокадо в упаковке за 269.99₽
+                  </Typography>
+                  <Typography>
+                    А значит выгоднее брать весовой авокадо
+                  </Typography>
+                </Alert>
+              </Collapse>
             </Grid>
           </Grid>
         </Paper>
