@@ -51,12 +51,18 @@ export const CalcPage = () => {
 
   const saveHistory = () => {
     setHistory((prevHistory) => {
+      const CURRENT_DATE = new Date();
+      const NEW_DATE = new Date(CURRENT_DATE.setMonth(CURRENT_DATE.getMonth() + 3));
       setCookie('calculates', [
-        ...prevHistory,
+          ...prevHistory,
+          {
+            a, b, c, x, y, z, counter
+          }
+        ],
         {
-          a, b, c, x, y, z, counter
+          expires: NEW_DATE
         }
-      ]);
+      );
       return [
         ...prevHistory,
         {
