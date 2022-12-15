@@ -37,7 +37,7 @@ const actions = [
     icon: <TelegramIcon/>,
     name: 'Telegram',
     id: 'telegram',
-    link: 'https://t.me/NikitaGuriev',
+    link: 'https://t.me/qjalti',
   },
   {
     icon: <WhatsAppIcon/>,
@@ -61,13 +61,13 @@ const actions = [
     icon: <InstagramIcon/>,
     name: 'Instagram',
     id: 'instagram',
-    link: 'https://instagram.com/guriev_no',
+    link: 'https://instagram.com/qjalti',
   },
   {
     icon: <YouTubeIcon/>,
     name: 'YouTube',
     id: 'youtube',
-    link: 'https://www.youtube.com/c/NikitagurievRu',
+    link: 'https://www.youtube.com/@qjalti',
   },
 ];
 
